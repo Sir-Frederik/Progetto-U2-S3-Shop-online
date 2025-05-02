@@ -29,7 +29,7 @@ form.addEventListener("submit", function (e) {
     })
     .then((data) => {
       alert("Prodotto aggiunto con successo!");
-      form.reset();
+      window.location.href = "./index.html";
     })
     .catch((error) => {
       console.error(error);

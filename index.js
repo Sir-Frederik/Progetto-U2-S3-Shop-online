@@ -21,14 +21,14 @@ const getAndShowProducts = () => {
     .then((product) => {
       product.forEach((product) => {
         const col = document.createElement("div");
-        col.className = "col-md-4";
+        col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
         const card = document.createElement("div");
         card.className = "card mb-4 shadow-sm";
 
         const img = document.createElement("img");
         img.src = product.imageUrl;
-        img.className = "bd-placeholder-img card-img-top";
+        img.className = "card-img-top cover-img";
         img.alt = "product Photo";
 
         const cardBody = document.createElement("div");
@@ -40,6 +40,7 @@ const getAndShowProducts = () => {
 
         const p = document.createElement("p");
         p.className = "card-text";
+        p.textContent = `${product.price}€ `;
 
         const dFlex = document.createElement("div");
         dFlex.className = "d-flex justify-content-between align-items-center";

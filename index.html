@@ -10,7 +10,21 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .cover-img {
+        width: 100%;
+        height: 167px;
+        aspect-ratio: 2 / 3;
+        object-fit: contain;
+        object-position: center;
+      }
+      /* .card {
+        height: 40 px;
+      } */
+    </style>
   </head>
   <body class="bg-warning-subtle">
     <header>
@@ -24,9 +38,8 @@
       </div>
     </header>
     <main>
-      <a href="backoffice-inserimento.html" class="btn btn-primary">Aggiungi prodotto</a>
-
       <div class="container">
+        <a href="backoffice-inserimento.html" class="btn btn-danger">Aggiungi prodotto</a>
         <div class="row" id="cards-show">
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
