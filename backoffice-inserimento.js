@@ -1,4 +1,5 @@
 let form = document.getElementById("productForm");
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
