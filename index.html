@@ -39,17 +39,33 @@
     </header>
     <main>
       <div class="container">
-        <a href="backoffice-inserimento.html" class="btn btn-danger">Aggiungi prodotto</a>
+        <a href="backoffice-inserimento.html" class="btn btn-danger mb-3">Aggiungi prodotto</a>
         <div class="row" id="cards-show">
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card mb-4 shadow-sm">
-              <img src= "assets/place Holder.jpg" class="bd-placeholder-img card-img-top" alt = />
+              <img src="./assets/place Holder.jpg" class="card-img-top cover-img" alt="product Photo" />
               <div class="card-body">
-                <h5 class="card-title">caricamento</h5>
-
+                <h5 class="card-title">PRODUCT_NAME</h5>
+                <p class="card-text">PRODUCT_PRICE€</p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group"></div>
-                  <small class="text-muted"></small>
+                  <!-- <div class="btn-group"> -->
+                    <div class="row">
+                      <div class="col-12 col-sm-4">
+                  <button type="button" class="btn m-1 btn-info">
+                    <a href="./details.html?appId=PRODUCT_ID">Scopri di Più</a>
+                  </button>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <button type="button" class="btn m-1 btn-info" onclick="handleBuyButton(event)">Aggiungi al carrello</button>
+                </div>
+                <div class="col-12 col-sm-4"><button type="button" class="btn m-1 btn-info">
+                  <a href="./backoffice-modifica.html?appId=PRODUCT_ID">Modifica</a>
+                </button></div>
+                </div>
+                  
+                </div>
+                </div>
+                  <!-- </div> -->
                 </div>
               </div>
             </div>

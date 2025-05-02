@@ -50,19 +50,19 @@ const getAndShowProducts = () => {
 
         const btn1 = document.createElement("button");
         btn1.type = "button";
-        btn1.className = "btn btn-sm btn-outline-secondary";
+        btn1.className = "btn  m-1 btn-info";
         btn1.innerHTML = `<a href="./details.html?appId=${product._id}"> Scopri di Più</a>`;
 
         const btn2 = document.createElement("button");
         btn2.type = "button";
-        btn2.className = "btn btn-sm btn-outline-secondary";
+        btn2.className = "btn m-1 btn-info";
         btn2.textContent = "Aggiungi al carrello";
         // btn2.setAttribute("onclick", "handleBuyButton(event)");
         btn2.setAttribute("onclick", "handleBuyButton(event)");
 
         const btn3 = document.createElement("button");
         btn3.type = "button";
-        btn3.className = "btn btn-sm btn-outline-secondary";
+        btn3.className = "btn m-1 btn-info";
         btn3.textContent = "Modifica";
         btn3.innerHTML = `<a href="./backoffice-modifica.html?appId=${product._id}"> Modifica </a>`;
         // ./backoffice-modifica.html?appId=${productId}
