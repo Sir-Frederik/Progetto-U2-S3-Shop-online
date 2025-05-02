@@ -27,7 +27,7 @@ const getAndShowProducts = () => {
         card.className = "card mb-4 shadow-sm";
 
         const img = document.createElement("img");
-        img.src = "product.imageUrl";
+        img.src = product.imageUrl;
         img.className = "bd-placeholder-img card-img-top";
         img.alt = "product Photo";
 
@@ -82,7 +82,7 @@ const getAndShowProducts = () => {
     })
     .catch((error) => {
       console.log(error);
-      generateAlert(error.message);
+      alert(error.message);
     });
 };
 window.onload = function () {
