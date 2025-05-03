@@ -23,24 +23,22 @@ const getAndShowProducts = () => {
         const col = document.createElement("div");
         col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
         col.innerHTML = `
-        <div class="card mb-4 shadow-sm slide-fwd-center">
+        <div class="card mb-4 shadow-sm slide-fwd-center w-auto">
           <img src="${product.imageUrl}" class="card-img-top cover-img" alt="product Photo" />
           <div class="card-body">
             <h5 class="card-title">${product.name}</h5>
             <p class="card-text">${product.price}€ </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="row">
-                <div class="col-12 col-lg-4">
-                  <a href="./details.html?appId=${product._id}" class="btn btn-warning  btn-sm border border-danger">Scopri di Più</a>
-                </div>
-                <div class="col-12 col-lg-4">
-                 <a href="#" class="btn btn-warning  btn-sm border border-danger">Aggiungi al carrello</a>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <a href="./backoffice-modifica.html?appId=${product._id}" class="btn btn-warning btn-sm  border border-danger">Modifica</a>
-                </div>
-              </div>
+    
+          <div class="row w-auto"> <div class="col-12 col-lg-4">
+          <a href="./details.html?appId=${product._id}" class="btn btn-warning btn-sm border border-danger">Scopri di Più</a> 
+          </div> 
+          <div class="col-12 col-lg-4"> 
+          <a href="#" class="btn btn-warning btn-sm border border-danger">Aggiungi al carrello</a> </div>
+            <div class="col-12 col-lg-4"> 
+            <a href="./backoffice-modifica.html?appId=${product._id}" class="btn btn-warning btn-sm border border-danger">Modifica</a>
+            </div> 
             </div>
+        
           </div>
         </div>
       `;
