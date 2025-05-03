@@ -22,28 +22,29 @@ const getAndShowProducts = () => {
       product.forEach((product) => {
         const col = document.createElement("div");
         col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
-        col.innerHTML = `<div class="card mb-4 shadow-sm slide-fwd-center">
-    <img src="${product.imageUrl}" class="card-img-top cover-img" alt="product Photo" />
-    <div class="card-body">
-      <h5 class="card-title">${product.name}</h5>
-      <p class="card-text">${product.price}€ </p>
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
-          <button type="button" class="btn btn-warning">
-            <a href="./details.html?appId=${product._id}">Scopri di Più</a>
-          </button>
-          <button type="button" class="btn m-1 btn-warning" onclick="handleBuyButton(event)">
-            Aggiungi al carrello
-          </button>
-          <button type="button" class="btn btn-warning">
-            <a href="./backoffice-modifica.html?appId=${product._id}">Modifica</a>
-          </button>
+        col.innerHTML = `
+        <div class="card mb-4 shadow-sm slide-fwd-center">
+          <img src="${product.imageUrl}" class="card-img-top cover-img" alt="product Photo" />
+          <div class="card-body">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">${product.price}€ </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="row">
+                <div class="col-12 col-lg-4">
+                  <a href="./details.html?appId=${product._id}" class="btn btn-warning  btn-sm border border-danger">Scopri di Più</a>
+                </div>
+                <div class="col-12 col-lg-4">
+                 <a href="#" class="btn btn-warning  btn-sm border border-danger">Aggiungi al carrello</a>
+                </div>
+                <div class="col-12 col-lg-4">
+                  <a href="./backoffice-modifica.html?appId=${product._id}" class="btn btn-warning btn-sm  border border-danger">Modifica</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
+      `;
+
         row.appendChild(col);
         /*
         const card = document.createElement("div");

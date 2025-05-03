@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cianfrusaglie- Homepage</title>
+    <title>Cianfrusaglie - Homepage</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,8 +13,8 @@
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-     
       }
+
       .cover-img {
         width: 100%;
         height: 167px;
@@ -22,60 +22,61 @@
         object-fit: contain;
         object-position: center;
       }
-     #logo {
-      width: 100px;
-     }
 
-    
+      #logo {
+        width: 100px;
+      }
+
+      .card {
+        background-color: rgb(246 230 208);
+      }
+      .card .btn {
+        height: 150px;
+      }
     </style>
-
-   
   </head>
+
   <body class="bg-warning-subtle">
     <header>
       <div class="container py-4">
         <div class="row text-center">
-            <div class="col-12 mb-3">
-                <img src="./assets/logo.png" id="logo" class="img-fluid" style="max-width: 150px;">
-            </div>
-            
-            <div class="col-12 mb-2">
-                <h1 class="display-5">Benvenuto a <span class="text-danger">Cianfrusaglie!</span></h1>
-            </div>
-            
-            <div class="col-12">
-                <p class="lead">Vendo tutto ciò che prendo di nascosto dal garage di mio nonno</p>
-            </div>
+          <div class="col-12 mb-3">
+            <img src="./assets/logo.png" id="logo" class="img-fluid" style="max-width: 150px" />
+          </div>
+
+          <div class="col-12 mb-2">
+            <h1 class="display-5">Benvenuto a <span class="text-danger">Cianfrusaglie!</span></h1>
+          </div>
+
+          <div class="col-12">
+            <p class="lead">Vendo tutto ciò che prendo di nascosto dal garage di mio nonno</p>
+          </div>
         </div>
-    </div>
+      </div>
     </header>
+
     <main>
       <div class="container">
-        
         <div class="row mt-2" id="cards-show">
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card mb-4 shadow-sm">
-              <img src="./assets/place Holder.jpg" class="card-img-top cover-img" alt="immagine assente" />
+              <img src="./assets/placeHolder.jpg" class="card-img-top cover-img" alt="immagine assente" />
               <div class="card-body">
                 <h5 class="card-title">PRODUCT_NAME</h5>
                 <p class="card-text">PRODUCT_PRICE€</p>
                 <div class="d-flex justify-content-between align-items-center">
-              
-                    <div class="row">
-                      <div class="col-12 col-sm-4">
-                        <a href="./details.html?appId=PRODUCT_ID" class="btn m-1 btn-info">Scopri di più</a>
-
-                </div>
-                <div class="col-12 col-sm-4">
-                  <button type="button" class="btn m-1 btn-info" onclick="handleBuyButton(event)">Aggiungi al carrello</button>
-                </div>
-                <div class="col-12 col-sm-4"><button type="button" class="btn m-1 btn-info">
-                  <a href="./backoffice-modifica.html?appId=PRODUCT_ID">Modifica</a>
-                </button></div>
-                </div>
-                  
-                </div>
-              
+                  <div class="row">
+                    <div class="col-12 col-sm-4">
+                      <a href="./details.html?appId=PRODUCT_ID" class="btn m-1 btn-info">Scopri di più</a>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <button type="button" class="btn m-1 btn-info" onclick="handleBuyButton(event)">Aggiungi al carrello</button>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <button type="button" class="btn m-1 btn-info">
+                        <a href="./backoffice-modifica.html?appId=PRODUCT_ID">Modifica</a>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -85,6 +86,7 @@
         </div>
       </div>
     </main>
+
     <script src="index.js"></script>
   </body>
 </html>
