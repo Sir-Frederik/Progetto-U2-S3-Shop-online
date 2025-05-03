@@ -24,7 +24,7 @@ const getAndShowProducts = () => {
         col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
         const card = document.createElement("div");
-        card.className = "card mb-4 shadow-sm";
+        card.className = "card mb-4 shadow-sm slide-fwd-center";
 
         const img = document.createElement("img");
         img.src = product.imageUrl;

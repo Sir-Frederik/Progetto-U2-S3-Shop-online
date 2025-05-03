@@ -13,6 +13,7 @@
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+     
       }
       .cover-img {
         width: 100%;
@@ -21,41 +22,49 @@
         object-fit: contain;
         object-position: center;
       }
-      /* .card {
-        height: 40 px;
-      } */
+     #logo {
+      width: 100px;
+     }
+
+    
     </style>
 
    
   </head>
   <body class="bg-warning-subtle">
     <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="text-center fs-4 fs-sm-3">Benvenuto a <span class="text-danger fs-3 fs-sm-2">Cianfrusaglie! </span></h1>
-          </div>
-          <div class="col-12"><h2 class="text-center fs-4 fs-sm-3">Vendo tutto ciò che prendo di nascosto dal garage di mio nonno</h2></div>
+      <div class="container py-4">
+        <div class="row text-center">
+            <div class="col-12 mb-3">
+                <img src="./assets/logo.png" id="logo" class="img-fluid" style="max-width: 150px;">
+            </div>
+            
+            <div class="col-12 mb-2">
+                <h1 class="display-5">Benvenuto a <span class="text-danger">Cianfrusaglie!</span></h1>
+            </div>
+            
+            <div class="col-12">
+                <p class="lead">Vendo tutto ciò che prendo di nascosto dal garage di mio nonno</p>
+            </div>
         </div>
-      </div>
+    </div>
     </header>
     <main>
       <div class="container">
-        <a href="backoffice-inserimento.html" class="btn btn-danger mb-3">Aggiungi prodotto</a>
-        <div class="row" id="cards-show">
+        
+        <div class="row mt-2" id="cards-show">
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card mb-4 shadow-sm">
-              <img src="./assets/place Holder.jpg" class="card-img-top cover-img" alt="product Photo" />
+              <img src="./assets/place Holder.jpg" class="card-img-top cover-img" alt="immagine assente" />
               <div class="card-body">
                 <h5 class="card-title">PRODUCT_NAME</h5>
                 <p class="card-text">PRODUCT_PRICE€</p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <!-- <div class="btn-group"> -->
+              
                     <div class="row">
                       <div class="col-12 col-sm-4">
-                  <button type="button" class="btn m-1 btn-info">
-                    <a href="./details.html?appId=PRODUCT_ID">Scopri di Più</a>
-                  </button>
+                        <a href="./details.html?appId=PRODUCT_ID" class="btn m-1 btn-info">Scopri di più</a>
+
                 </div>
                 <div class="col-12 col-sm-4">
                   <button type="button" class="btn m-1 btn-info" onclick="handleBuyButton(event)">Aggiungi al carrello</button>
@@ -66,11 +75,12 @@
                 </div>
                   
                 </div>
-                </div>
-                  <!-- </div> -->
+              
+                  </div>
                 </div>
               </div>
             </div>
+            <a href="backoffice-inserimento.html" class="btn btn-danger m-3">Aggiungi prodotto</a>
           </div>
         </div>
       </div>
