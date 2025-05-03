@@ -21,15 +21,22 @@ window.onload = function () {
       .then((product) => {
         const productDetailsContainer = document.getElementById("product-details");
         productDetailsContainer.innerHTML = `
-          <div class="card mb-4 shadow-sm">
-            <img src="${product.imageUrl}" class="card-img-top" alt="Product Image">
-            <div class="card-body">
-              <h5 class="card-title">${product.name}</h5>
-              <p class="card-text">${product.description}</p>
-              <p class="card-text">Marca: ${product.brand}</p>
-              <p class="card-text">Prezzo: ${product.price}€</p>
-            </div>
-          </div>
+            <div class="col-12 col-md-8 col-lg-6">
+      <div class="card shadow-sm border-0">
+        <img src="${product.imageUrl}" class="card-img-top cover-img rounded-top" alt="Product Image" />
+        <div class="card-body">
+          <h5 class="card-title text-primary fw-bold">${product.name}</h5>
+          <p class="card-text text-muted mb-1">${product.description}</p>
+          <p class="card-text mb-1"><strong>Marca:</strong> ${product.brand}</p>
+          <p class="card-text fs-5"><strong>Prezzo:</strong> ${product.price}€</p>
+            <a href="#" class="btn btn-warning  btn-sm border border-danger">Aggiungi al carrello</a>
+              <a href="./backoffice-modifica.html?appId=${product._id}" class="btn btn-warning btn-sm  border border-danger">Modifica</a>
+              <button type="button"  class="btn btn-danger btn-sm  border border-danger" onclick="handleDelete(${product._id})">Elimina</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         `;
       })
       .catch((error) => {
@@ -37,43 +44,6 @@ window.onload = function () {
         alert("Errore nel caricamento dei dati del prodotto.");
       });
   }
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const productData = {
-      name: document.getElementById("name").value,
-      description: document.getElementById("description").value,
-      brand: document.getElementById("brand").value,
-      imageUrl: document.getElementById("imageUrl").value,
-      price: document.getElementById("price").value,
-    };
-
-    if (productId) {
-      fetch("https://striveschool-api.herokuapp.com/api/product/" + productId, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODE0OTJmMDFjMjUwNDAwMTUxYWI2YjciLCJpYXQiOjE3NDYxNzg4MDEsImV4cCI6MTc0NzM4ODQwMX0.BiTk1JQfqU_xliYrcsdyhwTdzwT2lgnuhSmT4Og83Rc",
-        },
-        body: JSON.stringify(productData),
-      })
-        .then((resp) => {
-          if (!resp.ok) {
-            throw new Error("Errore nell'aggiornamento del prodotto");
-          }
-          return resp.json();
-        })
-        .then((data) => {
-          alert("Prodotto aggiornato con successo!");
-
-          window.location.href = "./index.html";
-        })
-        .catch((error) => {
-          console.error(error);
-          alert(error.message);
-        });
-    }
-  });
 };
+
+const handleDelete = function () {};

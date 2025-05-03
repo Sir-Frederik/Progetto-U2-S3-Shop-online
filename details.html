@@ -10,20 +10,15 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-warning-subtle">
     <div class="container mt-5">
-      <div id="product-details" class="row">
-        <div class="card mb-4 shadow-sm">
-          <img src="./assets/placeHolder.jpg" class="card-img-top" alt="Product Image" />
-          <div class="card-body">
-            <h5 class="card-title">${product.name}</h5>
-            <p class="card-text">${product.description}</p>
-            <p class="card-text">Marca: ${product.brand}</p>
-            <p class="card-text">Prezzo: ${product.price}€</p>
-          </div>
-        </div>
-      </div>
+      <div id="product-details" class="row justify-content-center"></div>
     </div>
 
     <script src="details.js"></script>
