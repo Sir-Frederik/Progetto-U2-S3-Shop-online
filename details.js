@@ -1,5 +1,4 @@
 window.onload = function () {
-  const form = document.getElementById("productForm");
   const urlParams = new URLSearchParams(window.location.search);
   const productId = urlParams.get("appId");
   const container = document.getElementById("product-details");
@@ -66,7 +65,15 @@ window.onload = function () {
             window.location.reload();
           });
           buttonYes.addEventListener("click", () => {
-            handleDelete();
+            container.innerHTML = `
+<p class= "fw-bold fs-3"> Prodotto Eliminato. </p>
+<p> Mio Nonno non sarà contento...</p>
+ <a href="./index.html" class="btn  btn-warning  btn-sm border  mt-3">Torna alla Home</a>
+
+`;
+            container.className = "bg-warning-subtle";
+
+            deleteProduct();
           });
         });
       })
@@ -74,5 +81,18 @@ window.onload = function () {
         console.error(error);
         alert("Errore nel caricamento dei dati del prodotto.");
       });
+
+    const deleteProduct = function () {
+      fetch("https://striveschool-api.herokuapp.com/api/product/" + productId, {
+        method: "DELETE",
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODE0OTJmMDFjMjUwNDAwMTUxYWI2YjciLCJpYXQiOjE3NDYxNzg4MDEsImV4cCI6MTc0NzM4ODQwMX0.BiTk1JQfqU_xliYrcsdyhwTdzwT2lgnuhSmT4Og83Rc",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => console.log("Success:", data))
+        .catch((error) => console.error("Error:", error));
+    };
   }
 };
